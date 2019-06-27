@@ -1,0 +1,37 @@
+.card-container.card{
+  max-width:800px;
+  padding:40px 40px;
+  position: 20px 20px 20px ;
+  top:0;
+  right: 30%;
+  width:500px;
+}
+.card{
+  background-color: rgba(255, 255,255);
+  padding: 40px 45px 50px;
+  margin: 0 auto 25px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+}
+.forgot-password{
+  color:white;
+}
+.forgot-password:hover{
+  color: white;
+}
+.btn{
+  height: 45px;
+}
+
+#l1{
+  color: white;
+}
+#l2{
+  color: white;
+}
+#sub{
+  border-radius: 25px;
+}
+li{
+  display: inline;
+}
