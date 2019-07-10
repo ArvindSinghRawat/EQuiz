@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>        
+        #intro {
+            height: 92%;
+            background: url("img/sample.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        #examples {
+            scroll-behavior: smooth;
+        }
+        #get_started {
+            border-radius: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main data-spy="scroll" data-target=".navbar" data-offset="50">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark font-weight-bold navbar-background color-block z-depth-1 sticky-top">
+
+                <!-- Navbar brand -->
+                <a class="navbar-brand animated flipInX slow" href="#">
+                    <strong>EQuiz</strong>
+                </a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_navbar" aria-controls="main_navbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="main_navbar">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Home
+                              <span class="sr-only">(current)</span>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#sec_get_started">Getting Started</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#sec_examples">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#sec_gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#sec_contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--/Navbar-->
+
+            <!--Mask-->
+            <div class="mask rgba-black-strong white-text mb-5" id="intro">
+
+                <div class="container-fluid d-flex align-items-center justify-content-center">
+
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="col-sm-12 col-md-6">
+
+                            <div class="d-flex flex-column justify-content-between align-items-center cp-2">
+                                <h1 class="heading display-4 cm-1">E-Quiz :<br> The Online Quiz Platform</h1>
+                                <h4 class="subheading font-weight-bold cm-2">Create Online Quizes And Tests</h4>
+                                <div class="mr-auto">
+                                    <a href="#sec_get_started" class="btn blue-gradient cm-1 w-100" id="get_started">
+                                        Get started <i class="fas fa-caret-right ml-3"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 d-sm-none d-md-block">
+
+                            <div class="view">
+                                <img src="https://previews.123rf.com/images/sumkinn/sumkinn1608/sumkinn160800081/61766570-quiz-background-the-concept-is-the-question-with-the-answer-vector-flat-design-with-shadow-on-wall.jpg" class="img-fluid" alt="smaple image">
+                                <div class="mask flex-center hm-gradient"></div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--/.Mask-->
+
+            <div class="container black-text">
+
+                <!--Section: Getting Started -->
+                <section id="sec_get_started" class="text-center">
+
+                    <!-- Heading -->
+                    <h2 class="mb-5 font-weight-bold">Getting Started</h2>
+
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center mb-4">
+
+                        <!--Grid column-->
+                        <div class="col-md-9">
+
+                        <!-- Description -->
+                        <p>Equiz helps you to create your own Quizes Online with minimal efforts.<br>
+                            Now, the knowledge of Web Development or the dedicated staff is not required to conduct the Quizes or Tests.<br>
+                            Just follow the given steps to make your own online quiz in short time.</p>
+
+                        </div>
+                        <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-md-4 mb-1 cp-1">
+                            <i class="fas fa-user-plus fa-3x"></i>
+                            <h4 class="my-4">SignUp</h4>
+                            <p> Sign Up as an Organisation and then Signup as an Admin.
+                                After validating your email address or contact number you can start making your own quizes in no time.</p>
+                            <div class="row">
+                                <div class="col-sm-12 col-lg-6">
+                                    <a href="#" class="btn btn-primary btn-md white-text w-100" title="Signup Organisation">Organisation</a>
+                                </div>
+                                <div class="col-sm-12 col-lg-6">
+                                    <a href="#" class="btn btn-primary btn-md white-text  w-100" title="Signup Admin">Admin</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                      <!--Grid column-->
+                      <div class="col-md-4 mb-1 cp-1">
+                          <i class="fas fa-palette fa-3x"></i>
+                          <h4 class="my-4">Personalisation</h4>
+                          <p>Choose from a number of templates and color options, to give your quiz look and feel which suits your organisation most.
+                          </p>
+
+                      </div>
+                      <!--Grid column-->
+
+                      <!--Grid column-->
+                      <div class="col-md-4 mb-1 cp-1">
+                          <i class="fas fa-cogs fa-3x"></i>
+                          <h4 class="my-4">Deploying</h4>
+                          <p>Choose a Time Slot and other authentication options and the exam will automatically start on the booked time slot.</p>
+                      </div>
+                      <!--Grid column-->
+
+                    </div>
+                    <!--Grid row-->
+
+                </section>
+                <!--Section: Getting Started -->
+
+            <hr class="mt-4 mb-5" id="examples_hr">
+
+            <!--Section: Examples-->
+            <section id="sec_examples">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4">
+
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" class="img-fluid">
+                            <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <h4 class="my-4 font-weight-bold">Heading</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+
+                        <div class="view overlay z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" class="img-fluid">
+                            <a href="#!">
+                            <div class="mask rgba-black-strong"></div>
+                            </a>
+                        </div>
+
+                        <h4 class="my-4 font-weight-bold">Heading</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+
+                        <div class="view overlay zoom z-depth-1-half">
+                            <img src="https://mdbootstrap.com/img/Photos/Others/images/48.jpg" class="img-fluid">
+                            <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <h4 class="my-4 font-weight-bold">Heading</h4>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam,
+                        aperiam minima
+                        assumenda deleniti hic.</p>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4">
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4">
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+
+            </section>
+            <!--Section: Examples-->
+
+            <hr class="my-5">
+
+            <!--Section: Best Features -->
+            <section id="sec_gallery">
+
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-sm-12 col-xl-12">
+
+                        <!--Carousel Wrapper-->
+                        <div id="carousel-example-1z" class="carousel slide" data-ride="carousel">
+                            <!--Indicators-->
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                            </ol>
+                            <!--/.Indicators-->
+                            <!--Slides-->
+                            <div class="carousel-inner" role="listbox">
+                            <!--First slide-->
+                            <div class="carousel-item active">
+                                <div class="card custom-landscape-card p-2 pt-4  m-2">
+                                    <div class="card-title">
+                                        <h2 class="h2-responsive text-center"><strong>First Card<strong></h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
+                                                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="First slide">
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                                                    <div class="d-flex flex-column h-100 w-100">
+                                                        <div class="align-self-baseline p-3 w-100">
+                                                            <h3 class="h3-responsive text-center">Heading Text</h3>
+                                                        </div>
+                                                        <div class="flex-grow-1 p-3 w-100">
+                                                            <i class="fas fa-quote-left fa-pull-left"></i>
+                                                                Content Text
+                                                            <i class="fas fa-quote-right fa-pull-right"></i>
+                                                        </div>
+                                                        <div class="align-self-end p-3 w-100">
+                                                            Footer Text
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/First slide-->
+                            <!--Second slide-->
+                            <div class="carousel-item">
+                                <div class="card custom-landscape-card p-2 pt-4  m-2">
+                                    <div class="card-title">
+                                        <h2 class="h2-responsive text-center"><strong>Second Card<strong></h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
+                                                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                                                        alt="First slide">
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                                                    <div class="d-flex flex-column h-100 w-100">
+                                                        <div class="align-self-baseline p-3 w-100">
+                                                            <h3 class="h3-responsive text-center">Heading Text</h3>
+                                                        </div>
+                                                        <div class="flex-grow-1 p-3 w-100">
+                                                            <i class="fas fa-quote-left fa-pull-left"></i>
+                                                            Content Text
+                                                            <i class="fas fa-quote-right fa-pull-right"></i>
+                                                        </div>
+                                                        <div class="align-self-end p-3 w-100">
+                                                            Footer Text
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Second slide-->
+                            <!--Third slide-->
+                            <div class="carousel-item">
+                                <div class="card custom-landscape-card p-2 pt-4  m-2">
+                                    <div class="card-title">
+                                        <h2 class="h2-responsive text-center"><strong>Third Card<strong></h2>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
+                                                    <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                                                        alt="First slide">
+                                                </div>
+                                                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                                                    <div class="d-flex flex-column h-100 w-100">
+                                                        <div class="align-self-baseline p-3 w-100">
+                                                            <h3 class="h3-responsive text-center">Heading Text</h3>
+                                                        </div>
+                                                        <div class="flex-grow-1 p-3 w-100">
+                                                            <i class="fas fa-quote-left fa-pull-left"></i>
+                                                            Content Text
+                                                            <i class="fas fa-quote-right fa-pull-right"></i>
+                                                        </div>
+                                                        <div class="align-self-end p-3 w-100">
+                                                            Footer Text
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/Third slide-->
+                            </div>
+                            <!--/.Slides-->
+                            <!--Controls-->
+                            <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            <!--/.Controls-->
+                        </div>
+                        <!--/.Carousel Wrapper-->
+
+                    </div>
+                    <!--Grid column-->
+                    
+            </section>
+            <!--/Section: Best Features-->
+
+            <hr class="my-5">
+
+            <!--Section: Contact-->
+            <section id="sec_contact">
+                                
+                <!-- Heading -->
+                <h2 class="mb-5 font-weight-bold">Contact Us</h2>
+
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-md-12 px-4 pb-4">
+                        <!-- Form contact -->
+                        <form class="p-5 grey-text card mx-1 mb-1 p-1">
+
+                            <div class="md-form form-sm m-2"> <i class="fas fa-user prefix"></i>
+                                <input type="text" id="form3" class="form-control form-control-sm">
+                                <label for="form3">Your name</label>
+                            </div>
+                            <div class="md-form form-sm  m-2"> <i class="fas fa-envelope prefix"></i>
+                                <input type="text" id="form2" class="form-control form-control-sm">
+                                <label for="form2">Your email</label>
+                            </div>
+                            <div class="md-form form-sm m-2"> <i class="fas fa-tag prefix"></i>
+                                <input type="text" id="form32" class="form-control form-control-sm">
+                                <label for="form34">Subject</label>
+                            </div>
+                            <div class="md-form form-sm m-2"> <i class="fas fa-pencil-alt prefix"></i>
+                                <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+                                <label for="form8">Your message</label>
+                            </div>
+                            <div class="text-center mt-4 m-2">
+                                <button class="btn btn-primary">Send <i class="far fa-paper-planeml-1"></i></button>
+                            </div>
+                        </form>
+                        <!-- Form contact -->
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-7 col-md-12">
+
+                        <!--Profiles-->
+                        <div class="row h-100 pb-4">
+                            <!-- Card deck -->
+                            <div class="card-deck p-1">
+
+                                <!-- Card -->
+                                <div class="card custom-card">
+
+                                    <!--Card image-->
+                                    <div class="view overlay">
+                                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+                                        <a href="#!">
+                                            <div class="mask rgba-white-slight"></div>
+                                        </a>
+                                    </div>
+                                    <!--/Card image-->
+
+                                    <!--Card content-->
+                                    <div class="card-body d-flex flex-column align-items-end">
+
+                                        <!--Title-->
+                                        <h4 class="card-title">Arvind Singh Rawat</h4>
+                                        <!--Text-->
+                                        <p class="card-text flex-grow-1">
+                                            The newbie in the field of Web Development.
+                                        </p>
+                                        
+                                        <!-- Card footer -->
+                                        <div class="custom-card-footer text-muted text-center d-flex flex-row justify-content-center align-self-end w-100">
+                                            <a href="https://www.facebook.com/arvind.singh.rawat.1998" class="custom-icons m-1 p-1">
+                                                <i class="fab fa-facebook fa-2x"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/arvind-singh-rawat" class="custom-icons m-1 p-1">
+                                                <i class="fab fa-linkedin fa-2x"></i>
+                                            </a>    
+                                        </div>
+                                    </div>
+                                    <!--Card content-->
+
+                                </div>
+                                <!-- /Card -->
+
+                                <!-- Card -->
+                                <div class="card custom-card">
+
+                                    <!--Card image-->
+                                    <div class="view overlay">
+                                    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+                                    <a href="#!">
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                    </div>
+                                
+                                    <!--Card content-->
+                                    <div class="card-body d-flex flex-column align-items-end">
+
+                                        <!--Title-->
+                                        <h4 class="card-title">Ayush Bhargava</h4>
+                                        <!--Text-->
+                                        <p class="card-text flex-grow-1">
+                                            The Django Expert with top of the class Logics.
+                                        </p>
+
+                                        <!-- Card footer -->
+                                        <div class="custom-card-footer text-muted text-center d-flex flex-row justify-content-center align-self-end w-100">
+                                            <a href="#" class="custom-icons m-1 p-1">
+                                                <i class="fab fa-instagram fa-2x"></i>
+                                            </a>
+                                            <a href="#" class="custom-icons m-1 p-1">
+                                                <i class="fab fa-linkedin fa-2x"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--Card content-->
+
+                                </div>
+                                <!-- Card -->
+
+                            </div>
+                            <!-- /Card deck -->
+                        </div>
+                        <!--Profiles-->
+
+                    </div>
+                    <!--Grid column-->
+                </div>
+            </section>
+            <!--Section: Contact-->
+            </div>
+    </main>
+
+    <footer class="page-footer  unique-color-dark pt-4">
+
+        <!-- Social buttons -->
+        <div class="primary-color">
+            <div class="container">
+                <!--Grid row-->
+                <div class="row py-4 d-flex align-items-center footer-social-media mb-4 p-3">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6 col-lg-7 text-center text-md-right">
+                        <!--Facebook-->
+                        <a class="fb-ic ml-0">
+                            <i class="fab fa-facebook-f white-text mr-4"> </i>
+                        </a>
+                        <!--Twitter-->
+                        <a class="tw-ic">
+                            <i class="fab fa-twitter white-text mr-4"> </i>
+                        </a>
+                        <!--Google +-->
+                        <a class="gplus-ic">
+                            <i class="fab fa-google-plus-g white-text mr-4"> </i>
+                        </a>
+                        <!--Linkedin-->
+                        <a class="li-ic">
+                            <i class="fab fa-linkedin-in white-text mr-4"> </i>
+                        </a>
+                        <!--Instagram-->
+                        <a class="ins-ic">
+                            <i class="fab fa-instagram white-text mr-lg-4"> </i>
+                        </a>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+            </div>
+        </div>
+        <!-- Social buttons -->
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left p-4">
+
+            <!-- Grid row -->
+            <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h5 class="text-uppercase">Not Satisfied ?</h5>
+                <p>Here you can use links to explore more in depth.</p>
+                <p>Get Started, Now.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Accounts</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                    <a href="#!">Admin Login</a>
+                    </li>
+                    <li>
+                    <a href="#!">Organisation Login</a>
+                    </li>
+                    <li>
+                    <a href="#!">Profile</a>
+                    </li>
+                    <li>
+                    <a href="#!">SignUp</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+            <!-- Links -->
+            <h5 class="text-uppercase">Explore</h5>
+
+            <ul class="list-unstyled">
+                <li>
+                <a href="#!">Best Features</a>
+                </li>
+                <li>
+                <a href="#!">Blogs</a>
+                </li>
+                <li>
+                <a href="#!">Tutorial</a>
+                </li>
+                <li>
+                <a href="#!">Contact Us</a>
+                </li>
+            </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
+    <!-- Start your project here-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>

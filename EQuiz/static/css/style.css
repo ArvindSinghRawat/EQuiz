@@ -1,0 +1,101 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.nav-bg {
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.11), rgba(0, 0, 155, 0.11) 50%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.11), rgba(0, 0, 155, 0.11) 50%);
+    background: linear-gradient(to 90deg, rgba(255, 255, 255, 0.11), rgba(0, 0, 155, 0.11) 50%);
+}
+
+.bg-transparent {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body,
+header {
+    height: 100%;
+}
+
+.container-fluid {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Custom Margins and Padding */
+.cm-1 {
+    margin: 5%;
+}
+
+.cm-2 {
+    margin: 10%;
+}
+
+.cp-1 {
+    padding: 2.5%;
+}
+
+.cp-2 {
+    padding: 5%;
+}
+
+.cp-2 {
+    padding: 10%;
+}
+
+.custom-card .card-body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.custom-card-footer {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 255, 255, 0.25);
+    width: 100%;
+}
+
+.custom-card .card-title {
+    padding: 5%;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+.custom-card .card-text {
+    padding: 5%;
+    text-align: justify;
+    padding-top: 0px;
+}
+
+.custom-icons {
+    color: #4267b2;
+}
+
+.custom-landscape-card {
+    width: 98%;
+    min-height: 50vh;
+    max-height: 100vh;
+    border-radius: 10px;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: background-color 0.5 ease-in-out;
+}
+
+.footer-social-media,
+.navbar-background {
+    width: 100;
+    transition: 0.6s;
+    background-size: 200%;
+    background-image: linear-gradient(to left, #0000bb, #0000aa, #00cccc, #0000ff, #0000cc);
+}
+
+.footer-social-media:hover,
+.navbar-background:hover {
+    background-position: right;
+}

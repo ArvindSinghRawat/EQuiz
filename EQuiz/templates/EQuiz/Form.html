@@ -1,0 +1,115 @@
+{% extends 'EQuiz/base.html' %}
+
+{% block custom_css %}
+<style>
+    .custom-card{
+        background-image: url('https://wonderfulengineering.com/wp-content/uploads/2014/09/blue-wallpaper-27.jpg');
+    }
+    .flip-card{
+        background-color: transparent;
+        text-align: center;
+        transition: 0.8s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover flip-card-inner{
+        transform: rotateY(180deg);
+    } 
+    .flip-card-back{
+        position: absolute;
+        top: 0px;
+        transform: rotateY(180deg);
+    }
+</style>
+{% endblock %}
+
+{% block main_body %}
+    <div class="row">
+        <div class="col-sm-12 col-md-6 custom-card p-4">
+            <div class="flip-card w-100 h-100">
+                <div class="flip-card-inner">
+                    <div class="card flip-card-front p-3 w-100 h-100">
+                        <div class="text-center">
+                            <h1 class="black-text mb-7 mt-6 font-weight-bold">
+                                <strong>SIGN UP</strong>
+                            </h1>
+                        </div>
+                        <form class="md-form mt-3" action="D:\EQuiz\EQuizApp\templates\admin\n2.html">
+                            <!--Name-->
+                            <div class="md-form">
+                                <input type="text" id="UName" class="form-control black-text ">
+                                <label id="l1" for="UName">User Name</label>
+                            </div>
+                            <!--Password-->
+                            <div class="md-form">
+                                <input type="password" id="UPassword" class="form-control black-text">
+                                <label id="l2" for="UPassword">Password</label>
+                            </div>
+                            <!--Confirm password-->
+                            <div class="md-form">
+                                <input type="password" id="ConfirmUPassword" class="form-control black-text">
+                                <label id="l3" for="ConfirmUPassword">Confirm Password</label>
+                            </div>
+                            <!--Contact-->
+                            <div class="md-form">
+                                <input type="text" id="ContactNo" class="form-control black-text ">
+                                <label id="l4" for="ContactNo">Contact Number</label>
+                            </div>
+                            <!--Email-->
+                            <div class="md-form">
+                                <input type="email" id="Email" class="form-control black-text">
+                                <label id="l5" for="Email">E-mail</label>
+                            </div>
+                            <!--Organization-->
+                            <div class="md-form">
+                                <input type="text" id="Org" class="form-control black-text">
+                                <label id="l6" for="Org">Organization</label>
+                            </div>
+                            <!--Location-->
+                            <div class="md-form">
+                                <input type="textarea" id="Address" class="form-control md-textarea" rows="5">
+                                <label id="l7" for="Address">Address</label>
+                            </div>
+                        
+                            <button class="btn btn-lg btn-green btn-block btn-signin" id="sub" type="submit">Submit</button>
+                        
+                            <center>
+                                <a href="D:\EQuiz\EQuizApp\templates\admin\n3.html" class="already">Already a customer ?</a>
+                            </center>
+                        
+                        </form>
+                    </div>
+                    <div class="card flip-card-back p-3 w-100 h-100">
+                        <div class="text-center">
+                            <h1 class="black-text mb-7 mt-6 font-weight-bold">
+                                <strong>ADMIN FORM</strong> 
+                            </h1>
+                        </div>
+                        <form class="md-form mt-3">
+                            <!--Name-->
+                            <div class="md-form">
+                                <input type="text" id="AUName" class="form-control black-text ">
+                                <label id="l1" for="AUName">User Name</label>
+                            </div>
+                            <!--Password-->
+                            <div class="md-form">
+                                <input type="password" id="AUPassword" class="form-control black-text">
+                                <label id="l2" for="AUPassword">Password</label>
+                            </div>
+                        
+                            <button class="btn btn-lg btn-green btn-block btn-signin" type="submit" id="sub">Submit</button>
+                        
+                            <center><a href="#" class="forgot-password">Forgot Password ? </a></center>
+                            <center><a href="D:\EQuiz\EQuizApp\templates\admin\n3.html" class="forgot-password">Switch To User Form ? </a>
+                            </center>
+                        
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_js %}
+{% endblock %}
