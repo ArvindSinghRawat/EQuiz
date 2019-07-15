@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block main_body %}
+{% load static %}
     <!--Mask-->
     <div class="mask rgba-black-strong white-text mb-5" id="intro">
 
@@ -11,10 +12,18 @@
 
             <div class="row d-flex justify-content-center">
 
-                <div class="col-sm-12 col-md-6">
 
+                <div class="col-md-6 d-sm-none d-md-flex">
+                    <div class="view align-self-center">
+                        <img src="{% static 'img/bg/Front.png' %}"
+                            class="img-fluid" alt="smaple image">
+                        <div class="mask flex-center hm-gradient"></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
                     <div class="d-flex flex-column justify-content-between align-items-center cp-2">
-                        <h1 class="heading display-4 cm-1">E-Quiz :<br> The Online Quiz Platform</h1>
+                        <h1 class="heading display-4 cm-1"><strong class='d-sm-block d-md-none'>EQuiz : <br></strong><strong>The Online Quiz Platform</strong></h1>
                         <h4 class="subheading font-weight-bold cm-2">Create Online Quizes And Tests</h4>
                         <div class="mr-auto">
                             <a href="#sec_get_started" class="btn blue-gradient cm-1 w-100" id="get_started">
@@ -22,17 +31,6 @@
                             </a>
                         </div>
                     </div>
-
-                </div>
-
-                <div class="col-md-6 d-sm-none d-md-block">
-
-                    <div class="view">
-                        <img src="https://previews.123rf.com/images/sumkinn/sumkinn1608/sumkinn160800081/61766570-quiz-background-the-concept-is-the-question-with-the-answer-vector-flat-design-with-shadow-on-wall.jpg"
-                            class="img-fluid" alt="smaple image">
-                        <div class="mask flex-center hm-gradient"></div>
-                    </div>
-
                 </div>
 
 
