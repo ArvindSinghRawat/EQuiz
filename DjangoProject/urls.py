@@ -19,7 +19,7 @@ from django.urls import path
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^$', include('EQuiz.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'^EQuiz/', include('EQuiz.urls')),
     url(r'^Users/', include('Users.urls')),
 ]
