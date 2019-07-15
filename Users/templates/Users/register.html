@@ -1,0 +1,74 @@
+{% extends 'Users/base.html' %}
+{% block custom_css %}
+<style>
+    .custom-select{
+        background-color: transparent;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        color: white;
+            -webkit-appearance: none;
+
+    }
+    .custom-select option{
+        background-color: #000638;
+        width: 90%; 
+        font-size: 1rem;
+        font-weigth: 400;
+    }
+</style>
+{% endblock %}
+{% block right_body %}
+<div class="card card-image p-4 w-100 h-100">
+    <div class="text-center">
+        <h1 class="white-text m-3 font-weight-bold"><strong>Sign Up</strong></h1>
+    </div>
+    <form class="md-form my-3 w-100" action="register" method="POST">
+        {% csrf_token %}
+        <div class="md-form my-3 w-100">
+            <input type="text" id="AUsername" name="AUsername" class="form-control white-text w-100 ">
+            <label class = "white-text" id="l1" for="AUsername">First Name</label>
+        </div>
+        <div class="md-form my-3 w-100">
+            <input type="text" id="AMobile" name="AMobile" class="form-control white-text w-100 ">
+            <label class = "white-text" id="l4" for="AMobile">Mobile</label>
+        </div>
+        <div class="md-form my-3 w-100">
+            <input type="email" id="AEmail" name="AEmail" class="form-control white-text w-100 ">
+            <label class = "white-text" id="l5" for="AEmail">E-Mail</label>
+        </div>
+        <div class="md-form my-3 w-100">
+            <input type="password" id="APassword" name="APassword" class="form-control white-text w-100 ">
+            <label class = "white-text" id="l6" for="APassword">Password</label>
+        </div>
+        <div class="md-form my-3 w-100">
+            <input type="password" id="AConfirmPassword" name="AConfirmPassword" class="form-control white-text w-100 ">
+            <label class = "white-text" id="l7" for="AConfirmPassword">Confirm Password</label>
+        </div>
+        <div class="md-form my-3 w-100">
+            <textarea type="mdb-textarea" id="AAddress" name="AAddress" 
+                      class="md-textarea form-control form-control-sm white-text w-100 "></textarea>
+            <label class = "white-text" id="l7" for="AAddress">Address</label>
+        </div>
+        <div class="md-form my-3 w-100 my-3 w-100">
+            <select class="custom-select form-control form-control-sm white-text w-100" id="AOrganisation" name="AOrganisation">
+            <option selected>Choose an Organisation</option>
+            {% for org in OrgList %}
+                <option value='{{org.id}}' >{{org}}</option>
+            {% endfor %}
+            </select>
+        </div>
+
+        <button class="btn btn-lg btn-green btn-block btn-signin" id="sub" type="submit">
+            Submit
+        </button>
+    </form>
+    <div class="text-center m-2 custom-blue-links">
+        <a href="#" class="already">
+            Already a customer ?
+        </a>
+    </div>
+</div>
+{% endblock %}
+{% block custom_js %}
+{% endblock %}

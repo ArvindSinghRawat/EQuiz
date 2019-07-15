@@ -1,0 +1,63 @@
+{% extends 'Users/messagebase.html' %}
+{% block custom_css %}
+{% endblock %}
+{% block main_body %}
+    <div class="jumbotron card card-image w-100 m-0 p-0">
+        <div class="text-white text-center d-flex flex-column">
+            {% if name != None %}
+            <div class="card-title h1-responsive p-3 pt-5 my-5 font-bold">
+                <h2><strong>Successful Login</strong></h2>
+            </div>
+            <div class="card-content flex-grow-1 mb-auto font-bold">
+                <h1 class="h1-responsive mx-5 mb-5">
+                    Welcome, {{name}}
+                </h1>
+            </div>
+            <div class="card-footer align-self-end w-100">
+                <div class="container-fluid">
+                    <div class="row d-flex flex-sm-column flex-lg-row justify-content-around text-center px-3 py-4">
+                        <div class="custom-blue-links py-3">
+                            <a href="/EQuiz/"><i class="fas fa-home"></i> &nbsp;Go To Home</a>
+                        </div>
+                        <div class="custom-blue-links py-3">
+                            <a href="#"><i class="fas fa-user"></i> &nbsp;Go To Accounts</a>
+                        </div>
+                        <div class="custom-blue-links py-3">
+                            <a href="/EQuiz/"><i class="fas fa-search"></i> &nbsp;Go To Quiz</a>
+                        </div>
+                        <div class="custom-blue-links py-3">
+                            <a href="/EQuiz/"><i class="fas fa-book"></i> &nbsp;Go To Tutorial</a>
+                        </div>
+                        <div class="custom-blue-links py-3">
+                            <a href="logout"><i class="fas fa-sign-out-alt"></i> &nbsp;Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+            <div class="card-title h1-responsive p-3 pt-5 my-5 font-bold">
+                <h2><strong>Please Login to Continue</strong></h2>
+            </div>
+            <div class="card-footer align-self-end w-100">
+                <div class="container-fluid">
+                    <div class="row d-flex flex-sm-column flex-lg-row justify-content-around text-center px-3 py-4">
+                        <div class="custom-blue-links py-3">
+                            <a href="/EQuiz/"><i class="fas fa-home"></i> &nbsp;Go To Home</a>
+                        </div>
+                        <div class="custom-blue-links py-3">
+                            <a href="/EQuiz/"><i class="fas fa-book"></i> &nbsp;Go To Tutorial</a>
+                        </div>
+                        <div class="custom-blue-links py-3">
+                            <a href="admin_signin"><i class="fas fa-sign-in-alt"></i> &nbsp;Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+{% block right_body %}
+{% endblock %}
+{% block custom_js %}
+{% endblock %}

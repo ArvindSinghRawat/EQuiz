@@ -1,0 +1,48 @@
+{% extends 'Users/base.html' %}
+{% block custom_css %}
+{% endblock %}
+{% block right_body %}
+<div class="card card-image p-4 w-100 h-100">
+    <div class="text-center">
+        <h1 class="white-text m-3 font-weight-bold"><strong>Organisation Sign Up</strong></h1>
+    </div>
+    <form class="md-form m-2 w-100" action="reg_org" method="POST">
+        {% csrf_token %}
+        <div class="md-form m-2  w-100">
+            <input type="text" id="OrgName" name="OrgName" class="form-control white-text w-100 ">
+            <label id="l1" class="white-text" for="OrgName">Name of Organisation</label>
+        </div>
+        <div class="md-form m-2  w-100">
+            <input type="text" id="OrgRepresentative" name="OrgRepresentative" class="form-control white-text w-100 ">
+            <label id="l1" class="white-text" for="OrgRepresentative">Representative Name</label>
+        </div>
+        <div class="md-form m-2  w-100">
+            <input type="text" id="OrgMobile" name="OrgMobile" class="form-control white-text w-100 ">
+            <label id="l4" class="white-text" for="OrgMobile">Mobile</label>
+        </div>
+        <div class="md-form m-2  w-100">
+            <input type="email" id="OrgEmail" name="OrgEmail" class="form-control white-text w-100 ">
+            <label id="l5" class="white-text" for="OrgEmail">E-Mail</label>
+        </div>
+        <div class="md-form m-2  w-100">
+            <input type="text" id="OrgType" name="OrgType" class="form-control white-text w-100 ">
+            <label id="l4" class="white-text" for="OrgType">Type</label>
+        </div>
+        <div class="md-form m-2  w-100">
+            <textarea type="mdb-textarea" id="OrgAddress" name="OrgAddress" class="md-textarea form-control form-control-sm white-text w-100 "></textarea>
+            <label id="l7" class="white-text" for="OrgAddress">Address</label>
+        </div>
+
+        <button class="btn btn-lg btn-green btn-block btn-signin" id="sub" type="submit">
+            Submit
+        </button>
+    </form>
+    <div class="text-center m-2 custom-blue-links">
+        <a href="#" class="already">
+            Already a customer ?
+        </a>
+    </div>
+</div>
+{% endblock %}
+{% block custom_js %}
+{% endblock %}
