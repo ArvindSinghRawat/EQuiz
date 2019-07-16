@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^$', include('EQuiz.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^Users/', include('Users.urls')),
+    url(r'^QuizAdmin/', include('QuizAdmin.urls')),
 ]
