@@ -63,16 +63,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sec_get_started">Getting Started</a>
+                        <a class="nav-link" onclick="$.scrollTo('#sec_get_started', 600, { offset: { top: -60, left: 0 } });">Getting Started</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sec_examples">Examples</a>
+                        <a class="nav-link" onclick="$.scrollTo('#sec_examples', 600, { offset: { top: -60, left: 0 } });">Examples</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sec_gallery">Gallery</a>
+                        <a class="nav-link" onclick="$.scrollTo('#sec_gallery', 600, { offset: { top: -60, left: 0 } });">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sec_contact">Contact</a>
+                        <a class="nav-link" onclick="$.scrollTo('#sec_contact', 600, { offset: { top: -60, left: 0 } });">Contact</a>
                     </li>
                 {% endblock %}
                 </ul>
@@ -221,24 +221,6 @@
         <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
         <!-- Block for Custom JS -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-        <!-- W3 Schools Smooth Scroll JS Method -->
-        <script>
-        $(document).ready(function(){
-            // Add smooth scrolling to all links
-            $("a").on('click', function(event) {
-
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") 
-                {
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    $.scrollTo(this.hash, 600, { offset: { top: -60, left: 0 } });
-
-                } // End if
-            });
-        });
-        </script>
         {% block custom_js %}
         {% endblock %}
     </body>
