@@ -1,2 +1,5 @@
 manage.py
 settings.py
+client-cert.pem
+server-ca.pem
+client-key.pem

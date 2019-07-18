@@ -1,30 +1,73 @@
 {% extends "QuizAdmin/base.html" %}
 {% block custom_css %}
+    <style>
+        .custom-container
+        {
+            transition: 0.6s;
+            background-size: 200%;
+            background-image: linear-gradient(to left, #0000bb, #0000ff, #0000aa, #330867, #0000bb);
+        }
+        .custom-select{
+            background-color: transparent;
+        }
+        .custom-select:focus{
+            background-color: transparent;
+        }
+        .custom-select option{
+            background-color: #320869;
+        }
+    </style>
 {% endblock %}
 {% block main_body %}
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
-    <p>as,ndjkabskdjfbkajsdbfkjasbdfkjasbdfkbas<p><br><br>
+    <div class="row p-3">
+        <div class="custom-container w-100">
+            <select class="custom-select form-control form-control-sm white-text w-100" id="AOrganisation" name="AOrganisation" onchange="optionChanged(this)">
+                <option class="m-5" selected>Choose an Option</option>
+                {% for org in options %}
+                    <option class="m-5" value='{{org.id}}' >{{org}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="row w-100 p-3" id="code">
+
+    </div>
 {% endblock %}
 {% block custom_js %}
+<script>
+    
+    function codeGenerator(raw_code,type,image,ansimage)
+    {
+        var img_ques,img_ans,q_type;
+        if( Number(image) > 0 )     img_ques = true;
+        else                        img_ques = false;
+        if( Number(ansimage) > 0 )  img_ans = true;
+        else                        img_ans = false;
+        if( type == 'RDB' )      q_type = 0;
+        else if( type == 'CKB' ) q_type = 1;
+        else if( type == 'NUM' ) q_type = 2;
+        else if( type == 'TXT' ) q_type = 3;
+        else                     q_type = -1;
+        var final_code = raw_code.replace('[[question]]',"<input type='text' class='w-75' id='question' name='question' placeholder='Enter the Question ...'/>");
+        /*if(img_ques) // If a Image Question
+            raw_code.replace('[[question]]',"<input type='text' class='w-75' id='question' name='question' placeholder='Enter the Question ...'/>");
+          */
+        return final_code;
+    }
+
+    function optionChanged(item){
+        alert( item.value );
+        $.ajax({
+            url: '/QuizAdmin/ajax/send_code/',
+            data: {
+            'id': item.value
+            },
+            dataType: 'json',
+            success: function (data) {
+                alert(data.code);
+                $('#code').html(codeGenerator(data.code,data.type,data.image,data.ansimage));
+            }
+        });
+    }   
+</script>
 {% endblock %}

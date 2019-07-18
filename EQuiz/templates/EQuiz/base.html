@@ -17,7 +17,8 @@
     <link href="{% static '/css/style.css' %}" rel="stylesheet">
     <style>
         #intro {
-            height: 92%;
+            height: 100vh;
+            min-height: 400px;
             background: url("{% static 'img/bg/Back.jpg' %}")no-repeat center center fixed;
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -40,7 +41,7 @@
 <body>
     <main data-spy="scroll" data-target=".navbar" data-offset="50">
         <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-dark font-weight-bold navbar-background color-block z-depth-1 sticky-top">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar font-weight-bold color-block">
 
             <!-- Navbar brand -->
             <a class="navbar-brand animated flipInX slow" href="#">
@@ -55,8 +56,9 @@
 
             <div class="collapse navbar-collapse" id="main_navbar">
                 <ul class="nav navbar-nav mr-auto">
+                {% block navbar_items %}
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" onclick="$.scrollTo(0, 600);">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -72,6 +74,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#sec_contact">Contact</a>
                     </li>
+                {% endblock %}
                 </ul>
             </div>
         </nav>
@@ -217,6 +220,25 @@
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
         <!-- Block for Custom JS -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+        <!-- W3 Schools Smooth Scroll JS Method -->
+        <script>
+        $(document).ready(function(){
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") 
+                {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    $.scrollTo(this.hash, 600, { offset: { top: -60, left: 0 } });
+
+                } // End if
+            });
+        });
+        </script>
         {% block custom_js %}
         {% endblock %}
     </body>

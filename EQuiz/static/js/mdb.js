@@ -14920,7 +14920,7 @@ var WOW;
 "use strict";
 
 (function ($) {
-  var SCROLLING_NAVBAR_OFFSET_TOP = 50;
+  var SCROLLING_NAVBAR_OFFSET_TOP = $(window).height()-60;
   $(window).on('scroll', function () {
     var $navbar = $('.navbar');
 
