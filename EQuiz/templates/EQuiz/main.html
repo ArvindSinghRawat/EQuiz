@@ -1,6 +1,41 @@
 {% extends 'EQuiz/base.html' %}
 
 {% block custom_css %}
+<style>
+    .owl-prev span, .owl-next span {
+        color: white;
+        font-weight: bold;
+        font-size: 50px;
+    }
+    .owl-prev, .owl-next {
+        position: absolute;
+        top: 0;
+        width: 10vw;
+        height: 100%;
+        text-align: center;
+        opacity: 0.25;
+        outline: none!important;
+        border-radius: 10px;
+        transition: opacity 0.2s ease-in;
+    }
+
+    .owl-prev:hover, .owl-next:hover {
+        opacity: 1;
+    }
+    .owl-next {
+        background-image: linear-gradient(to right, rgba(0,0,0,0.02), rgba(0,0,0,0.08), rgba(0,0,0,0.12), rgba(0,0,0,0.16), rgba(0,0,0,0.20), rgba(0,0,0,0.25))!important;
+        right: 0.5rem;
+    }
+    .owl-prev {
+        background-image: linear-gradient(to left, rgba(0,0,0,0.02), rgba(0,0,0,0.08), rgba(0,0,0,0.12), rgba(0,0,0,0.16), rgba(0,0,0,0.20), rgba(0,0,0,0.25))!important;
+    }
+    .owl-controls {
+        text-align: center;
+    }
+    .owl-controls .owl-page {
+        display: inline-block;
+}
+</style>
 {% endblock %}
 
 {% block main_body %}
@@ -11,7 +46,6 @@
         <div class="container-fluid d-flex align-items-center justify-content-center h-100">
 
             <div class="row d-flex justify-content-center">
-
 
                 <div class="col-md-6 d-sm-none d-md-flex">
                     <div class="view align-self-center">
@@ -26,13 +60,14 @@
                         <h1 class="heading display-4 cm-1"><strong class='d-sm-block d-md-none'>EQuiz : <br></strong><strong>The Online Quiz Platform</strong></h1>
                         <h4 class="subheading font-weight-bold cm-2">Create Online Quizes And Tests</h4>
                         <div class="mr-auto">
-                            <a href="#sec_get_started" class="btn blue-gradient cm-1 w-100" id="get_started">
-                                Get started <i class="fas fa-caret-right ml-3"></i>
+                            <a onclick="$.scrollTo('#sec_get_started', 600, { offset: { top: -60, left: 0 } });" class="btn blue-gradient cm-1 w-100" id="get_started">
+                                <strong>
+                                    Get started <i class="fas fa-caret-right ml-3"></i>
+                                </strong>
                             </a>
                         </div>
                     </div>
                 </div>
-
 
             </div>
 
@@ -221,44 +256,42 @@
             <div class="row">
                 <!--Grid column-->
                 <div class="col-sm-12 col-xl-12">
-
                     <!--Carousel Wrapper-->
-                    <div id="carousel-example-1z" class="carousel slide" data-ride="carousel">
-                        <!--Indicators-->
-                        <ol class="carousel-indicators">
-                            <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-                        </ol>
-                        <!--/.Indicators-->
-                        <!--Slides-->
-                        <div class="carousel-inner" role="listbox">
-                            <!--First slide-->
-                            <div class="carousel-item active">
-                                <div class="card custom-landscape-card p-2 pt-4  m-2">
-                                    <div class="card-title">
-                                        <h2 class="h2-responsive text-center"><strong>First Card<strong></h2>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
-                                                    <img class="d-block w-100"
-                                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
-                                                        alt="First slide">
-                                                </div>
-                                                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
-                                                    <div class="d-flex flex-column h-100 w-100">
-                                                        <div class="align-self-baseline p-3 w-100">
-                                                            <h3 class="h3-responsive text-center">Heading Text</h3>
-                                                        </div>
-                                                        <div class="flex-grow-1 p-3 w-100">
-                                                            <i class="fas fa-quote-left fa-pull-left"></i>
-                                                            Content Text
-                                                            <i class="fas fa-quote-right fa-pull-right"></i>
-                                                        </div>
-                                                        <div class="align-self-end p-3 w-100">
-                                                            Footer Text
+                    <div class="owl-carousel owl-loaded">
+                        <div class="owl-stage-outer">
+                            <!-- Slides -->
+                            <div class="owl-stage">
+                                <!--First slide-->
+                                <div class="owl-item active">
+                                    <div class="card custom-landscape-card p-2 pt-4  m-2">
+                                        <div class="card-title">
+                                            <h2 class="h2-responsive text-center">
+                                                <strong>First Card</strong>
+                                            </h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
+                                                        <img class="d-block w-100"
+                                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                                                            alt="First slide">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                                                        <div class="d-flex flex-column h-100 w-100">
+                                                            <div class="align-self-baseline p-3 w-100">
+                                                                <h3 class="h3-responsive text-center">
+                                                                    Heading Text
+                                                                </h3>
+                                                            </div>
+                                                            <div class="flex-grow-1 p-3 w-100">
+                                                                <i class="fas fa-quote-left fa-pull-left"></i>
+                                                                Content Text
+                                                                <i class="fas fa-quote-right fa-pull-right"></i>
+                                                            </div>
+                                                            <div class="align-self-end p-3 w-100">
+                                                                Footer Text
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -266,34 +299,34 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--/First slide-->
-                            <!--Second slide-->
-                            <div class="carousel-item">
-                                <div class="card custom-landscape-card p-2 pt-4  m-2">
-                                    <div class="card-title">
-                                        <h2 class="h2-responsive text-center"><strong>Second Card<strong></h2>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
-                                                    <img class="d-block w-100"
-                                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
-                                                        alt="First slide">
-                                                </div>
-                                                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
-                                                    <div class="d-flex flex-column h-100 w-100">
-                                                        <div class="align-self-baseline p-3 w-100">
-                                                            <h3 class="h3-responsive text-center">Heading Text</h3>
-                                                        </div>
-                                                        <div class="flex-grow-1 p-3 w-100">
-                                                            <i class="fas fa-quote-left fa-pull-left"></i>
-                                                            Content Text
-                                                            <i class="fas fa-quote-right fa-pull-right"></i>
-                                                        </div>
-                                                        <div class="align-self-end p-3 w-100">
-                                                            Footer Text
+                                <!--/First slide-->
+                                <!--Second slide-->
+                                <div class="owl-item">
+                                    <div class="card custom-landscape-card p-2 pt-4  m-2">
+                                        <div class="card-title">
+                                            <h2 class="h2-responsive text-center"><strong>Second Card</strong></h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
+                                                        <img class="d-block w-100"
+                                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg"
+                                                            alt="First slide">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                                                        <div class="d-flex flex-column h-100 w-100">
+                                                            <div class="align-self-baseline p-3 w-100">
+                                                                <h3 class="h3-responsive text-center">Heading Text</h3>
+                                                            </div>
+                                                            <div class="flex-grow-1 p-3 w-100">
+                                                                <i class="fas fa-quote-left fa-pull-left"></i>
+                                                                Content Text
+                                                                <i class="fas fa-quote-right fa-pull-right"></i>
+                                                            </div>
+                                                            <div class="align-self-end p-3 w-100">
+                                                                Footer Text
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -301,34 +334,34 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--/Second slide-->
-                            <!--Third slide-->
-                            <div class="carousel-item">
-                                <div class="card custom-landscape-card p-2 pt-4  m-2">
-                                    <div class="card-title">
-                                        <h2 class="h2-responsive text-center"><strong>Third Card<strong></h2>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="container-fluid">
-                                            <div class="row">
-                                                <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
-                                                    <img class="d-block w-100"
-                                                        src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
-                                                        alt="First slide">
-                                                </div>
-                                                <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
-                                                    <div class="d-flex flex-column h-100 w-100">
-                                                        <div class="align-self-baseline p-3 w-100">
-                                                            <h3 class="h3-responsive text-center">Heading Text</h3>
-                                                        </div>
-                                                        <div class="flex-grow-1 p-3 w-100">
-                                                            <i class="fas fa-quote-left fa-pull-left"></i>
-                                                            Content Text
-                                                            <i class="fas fa-quote-right fa-pull-right"></i>
-                                                        </div>
-                                                        <div class="align-self-end p-3 w-100">
-                                                            Footer Text
+                                <!--/Second slide-->
+                                <!--Third slide-->
+                                <div class="owl-item">
+                                    <div class="card custom-landscape-card p-2 pt-4  m-2">
+                                        <div class="card-title">
+                                            <h2 class="h2-responsive text-center"><strong>Third Card</strong></h2>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-4 col-lg-6 col-xl-7">
+                                                        <img class="d-block w-100"
+                                                            src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg"
+                                                            alt="First slide">
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5">
+                                                        <div class="d-flex flex-column h-100 w-100">
+                                                            <div class="align-self-baseline p-3 w-100">
+                                                                <h3 class="h3-responsive text-center">Heading Text</h3>
+                                                            </div>
+                                                            <div class="flex-grow-1 p-3 w-100">
+                                                                <i class="fas fa-quote-left fa-pull-left"></i>
+                                                                Content Text
+                                                                <i class="fas fa-quote-right fa-pull-right"></i>
+                                                            </div>
+                                                            <div class="align-self-end p-3 w-100">
+                                                                Footer Text
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -336,26 +369,16 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--/Third slide-->
                             </div>
-                            <!--/Third slide-->
+                            <!--/ Slides -->                    
                         </div>
-                        <!--/.Slides-->
-                        <!--Controls-->
-                        <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                        <!--/.Controls-->
                     </div>
-                    <!--/.Carousel Wrapper-->
 
+                    <!--/.Carousel Wrapper-->
                 </div>
                 <!--Grid column-->
-
+            </div>
         </section>
         <!--/Section: Best Features-->
 
@@ -501,4 +524,14 @@
 {% endblock %}
 
 {% block custom_js %}
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        dots:false,
+        items: 1,
+    })
+    
+</script>
 {% endblock %}
