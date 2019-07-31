@@ -43,7 +43,9 @@ body {
 .cp-2 {
     padding: 10%;
 }
-
+.custom-card{
+    min-height: 200px;
+} 
 .custom-card .card-body {
     padding: 0px;
     margin: 0px;
@@ -76,8 +78,7 @@ body {
 
 .custom-landscape-card {
     width: 98%;
-    min-height: 50vh;
-    max-height: 100vh;
+    min-height: 200px;
     border-radius: 10px;
 }
 
