@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Questiontype,Question
+from .models import Questiontype
 from django.http import JsonResponse
 
 
@@ -20,4 +20,13 @@ def send_code(request):
 
 def create_quiz(request):
     option_list = Questiontype.objects.only('id')
-    return render(request, 'QuizAdmin/MakeQuiz.html', {'name': request.session['name'], 'options': option_list, })
+    name = ''
+    try:
+        if request.session['name'] == None or request.session['name'] == '':
+            name = ''
+        else:
+            name = request.session['name']
+    except:
+        print('Name Error')
+    finally:
+        return render(request, 'QuizAdmin/MakeQuiz.html', {'name': name, 'options': option_list, })

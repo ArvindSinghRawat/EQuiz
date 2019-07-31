@@ -10,19 +10,32 @@ class Questiontype(models.Model):
         ('NUM', 'Number'),
         ('TXT', 'Text'),
     ]
+    TF = [
+        (0,'False'),
+        (1,'True'),
+    ]
     id = models.BigAutoField(db_column='ID', primary_key=True)
-    description = models.CharField(
-        db_column='Description', max_length=512, blank=True, null=True)
-    code = models.CharField(db_column='Code', max_length=2042)
-    optionsrequired = models.IntegerField(db_column='OptionsRequired')
-    questionimage = models.IntegerField(
-        db_column='QuestionImage', blank=True, null=True, default=0)
-    answerimage = models.IntegerField(
-        db_column='AnswerImage', blank=True, null=True, default=0)
-    type = models.CharField(db_column='Type', max_length=3,
-                            blank=True, null=True, choices=Question_types)
+    description = models.CharField(db_column='Description', max_length=256)
+    containercode = models.CharField(db_column='ContainerCode', max_length=256)
+    questioncontainer = models.CharField(
+        db_column='QuestionContainer', max_length=256)
+    optionscontainer = models.CharField(
+        db_column='OptionsContainer', max_length=256)
+    questiontext = models.CharField(
+        db_column='QuestionText', max_length=512, blank=True, null=True)
+    questionimage = models.CharField(
+        db_column='QuestionImage', max_length=512, blank=True, null=True)
+    optionstext = models.CharField(
+        db_column='OptionsText', max_length=512, blank=True, null=True)
+    optionsimage = models.CharField(
+        db_column='OptionsImage', max_length=512, blank=True, null=True)
+    type = models.CharField(
+        db_column='Type', max_length=3, choices=Question_types)
+    imagequestion = models.IntegerField(db_column='ImageQuestion', choices=TF)
+    imageoptions = models.IntegerField(
+        db_column='ImageOptions', choices=TF)
     madeby = models.ForeignKey(
-        AdminUser, models.CASCADE, db_column='MadeBy', blank=True, null=True)
+        AdminUser, models.CASCADE, db_column='MadeBy')
     createdon = models.DateTimeField(
         db_column='CreatedOn', blank=True, null=True)
     lastupdated = models.DateTimeField(
@@ -37,7 +50,7 @@ class Questiontype(models.Model):
         return self.type+" "+self.description
 
 
-class Question(models.Model):
+class QuizQuestion(models.Model):
     id = models.BigAutoField(db_column='ID', primary_key=True)
     question = models.CharField(db_column='Question', max_length=512)
     option1 = models.CharField(db_column='Option1', max_length=512)
@@ -52,8 +65,18 @@ class Question(models.Model):
         db_column='AnswerOption3', blank=True, null=True)
     answeroption4 = models.IntegerField(
         db_column='AnswerOption4', blank=True, null=True)
+    questionimage = models.ImageField(
+        db_column='QuestionImage', upload_to='media/Users/', blank=True, null=True, default='')
+    answerimage1 = models.ImageField(
+        db_column='AnswerImage1', upload_to='media/Users/', blank=True, null=True, default='')
+    answerimage2 = models.ImageField(
+        db_column='AnswerImage2', upload_to='media/Users/', blank=True, null=True, default='')
+    answerimage3 = models.ImageField(
+        db_column='AnswerImage3', upload_to='media/Users/', blank=True, null=True, default='')
+    answerimage4 = models.ImageField(
+        db_column='AnswerImage4', upload_to='media/Users/', blank=True, null=True, default='')
     type = models.ForeignKey(
-        'Questiontype', models.DO_NOTHING, db_column='Type')
+        Questiontype, models.DO_NOTHING, db_column='Type')
     difficulty = models.IntegerField(db_column='Difficulty')
     attachments = models.CharField(
         db_column='Attachments', max_length=2024, blank=True, null=True)
@@ -67,8 +90,8 @@ class Question(models.Model):
 
     class Meta:
         managed = True
-        db_table = 'Question'
+        db_table = 'QuizQuestion'
         app_label = "QuizAdmin"
 
     def __str__(self):
-        return self.id+" : "+self.question
+        return str(self.id)+" : "+str(self.question)

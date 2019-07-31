@@ -48,7 +48,7 @@
         else if( type == 'NUM' ) q_type = 2;
         else if( type == 'TXT' ) q_type = 3;
         else                     q_type = -1;
-        var final_code = raw_code.replace('[[question]]',"<input type='text' class='w-75' id='question' name='question' placeholder='Enter the Question ...'/>");
+        var final_code = raw_code.replace('[[question]]',"<input type='text' class='flex-grow-1 text-question' id='question' name='question' placeholder='Enter the Question ...'/>");
         /*if(img_ques) // If a Image Question
             raw_code.replace('[[question]]',"<input type='text' class='w-75' id='question' name='question' placeholder='Enter the Question ...'/>");
           */

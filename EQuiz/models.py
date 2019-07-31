@@ -52,7 +52,7 @@ class Quiz(models.Model):
     negativemarks = models.IntegerField(db_column='NegativeMarks',default=0)
     description = models.CharField(db_column='Description', max_length=1025, blank=True, null=True,default='')
     difficultyratio = models.CharField(db_column='DifficultyRatio', max_length=64, blank=True, null=True,default='')
-    createdby = models.ForeignKey('AdminUser', models.CASCADE, db_column='CreatedBy', blank=True, null=True)
+    createdby = models.ForeignKey(AdminUser, models.CASCADE, db_column='CreatedBy', blank=True, null=True)
     createdon = models.DateTimeField(db_column='CreatedOn', blank=True, null=True,default=datetime.now())
 
     class Meta:
