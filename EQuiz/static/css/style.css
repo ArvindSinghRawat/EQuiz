@@ -111,8 +111,7 @@ body {
     background-position: right;
 }
 
-
-
+/* Added Custom MDB scrollbars */
 
 .scrollbar {
     height: 100vh;
